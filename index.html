@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>table tennis game</title>
+    <style>
+        canvas {
+            width: 960px;
+            height: 600px;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    <p>Submission for Game Development Track for AWS Club Vellore Insititute of Technology | Name : Ritabrata Das | Theme : Pong Game</p>
+<div style="display: flex;">
+<div>
+<canvas id="screen" width="320" height="200"></canvas>
+<div style="display: flex; font-size: 30px;">
+<p style="color:green; padding-left: 16px;"><span id="enemyGoal">0</span></p>
+<p style="color:red; padding-left: 900px ;"><span id="playerGoal">0</span></p>
+</div>
+</div>
+<div style="padding-left: 40px;">
+    <h3>Stats</h3>
+    <p>Score : <span id="score">0</span></p>
+    <p>High Score : <span id="high">0</span></p>
+    <p>Graze : <span id="graze">0</span></p>
+    <button id="retry">Retry</button>
+    <p>Or press 'Z' Key to reset game</p>
+    <p><b>Press Left Shift to focus</b></p>
+    <p>Current Difficulty : <span id="mode">Normal</span></p>
+    <button id="Easy">Easy</button>
+    <button id="Normal">Normal</button>
+    <button id="Hard">Hard</button>
+    <button id="Lunatic">Lunatic</button>
+    <br>
+    <img src="easymodo.png" id="easyModo" style="display: none; width: 15vw; padding-top: 4px;" alt="easy modo???">
+    <h2 id="gameOver"></h2>
+    <ul>
+        <li>For each succesful hit you get 1 point</li>
+        <li>For each succesful "graze" (close shots) you get 2 points extra</li>
+    </ul>
+</div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

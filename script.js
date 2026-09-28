@@ -138,6 +138,14 @@ function resetGameState() {
     grazeCount = 0;
 }
 
+// Source - https://stackoverflow.com/a/8916697
+// for disabling scroll
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 document.addEventListener('keydown', function(event) {
     if (event.key == 'ArrowUp') {
         keyUpPress = true;
@@ -163,7 +171,7 @@ retryBtnHtml.addEventListener('click', function (event) {
     resetGameState();
 })
 easyBtnHtml.addEventListener('click', function(event) {
-    enemySpeedModifier = 0.3;
+    enemySpeedModifier = 0.5;
     easyModoHtml.style.display = "initial";
     difficulty.innerText = "Easy";
 })
